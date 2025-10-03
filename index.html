@@ -1,146 +1,180 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Barbaris Handyman Services</title>
-  <meta name="description" content="Barbaris Handyman Services — Restoration, Yard Work, Home Repairs, Furniture Assembly.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Barbaris Handyman Services — Booking & Prices</title>
   <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Handyman services in Los Angeles & nearby: furniture assembly, TV mounting, painting, yard work, restoration. Same‑day availability.">
 </head>
 <body>
   <header class="header">
-    <div class="brand"><span class="badge-dot"></span> Barbaris Handyman Services</div>
-    <div class="cta">
-      <a class="btn ghost" href="#services">Services & Prices</a>
-      <a class="btn" href="#contact">Get a Quote</a>
-    </div>
+    <nav class="nav container">
+      <div class="brand">Barbaris Handyman Services</div>
+      <div class="actions">
+        <a class="btn link" href="#prices">Services & Prices</a>
+        <a class="btn secondary" href="#booking">Get a Quote</a>
+      </div>
+    </nav>
   </header>
 
   <section class="hero">
     <div class="container">
-      <h1>Barbaris Handyman Services</h1>
-      <p class="slogan">Restoration • Yard Work • Home Repairs • Furniture Assembly</p>
-      <div class="kpis">
-        <div class="kpi"><strong>+1000</strong> tasks completed</div>
-        <div class="kpi"><strong>4.9★</strong> average rating</div>
-        <div class="kpi"><strong>Same-day</strong> availability</div>
+      <h1>Reliable handyman for your home & yard</h1>
+      <p>Restoration • Yard Work • Home Repairs • Furniture Assembly</p>
+      <div class="badges">
+        <div class="badge">1000+ tasks</div>
+        <div class="badge">4.9★ rating</div>
+        <div class="badge">Same‑day</div>
       </div>
-      <div class="filters" id="filters"></div>
-      <div class="row"><a class="btn" href="#contact">Book now</a><a class="btn ghost" href="#services">Browse services</a></div>
+      <div class="row">
+        <a class="btn" href="#booking">Book now</a>
+        <a class="btn secondary" href="#prices">Browse services</a>
+      </div>
     </div>
   </section>
 
-  <main class="container">
-    <h2 class="section-title" id="services">Services & Prices</h2>
-    <div class="grid" id="grid"></div>
+  <section id="prices" class="section container">
+    <h2>Services & Prices</h2>
+    <div class="notice">
+      Below are typical jobs and starting prices. Final quote depends on scope and materials. Two‑hour minimum may apply.
+    </div>
+    <div class="grid" style="margin-top:16px">
+      <div class="card">
+        <h3>TV Mounting</h3>
+        <p>From $95 (labor). Concealed cables and heavy mounts available.</p>
+      </div>
+      <div class="card">
+        <h3>Furniture Assembly</h3>
+        <p>From $70 for small items. Wardrobes & kitchens on request.</p>
+      </div>
+      <div class="card">
+        <h3>Painting & Touch‑ups</h3>
+        <p>From $120 per room (labor). Airless sprayer available.</p>
+      </div>
+      <div class="card">
+        <h3>Restoration & Caulking</h3>
+        <p>Tub refinishing, stone/tiles, doors. Custom estimate.</p>
+      </div>
+      <div class="card">
+        <h3>Yard Work</h3>
+        <p>Clean‑up, trimming, pressure washing. From $60/hr.</p>
+      </div>
+      <div class="card">
+        <h3>Other</h3>
+        <p>Misc repairs, installations, drilling, mounting, etc.</p>
+      </div>
+    </div>
+  </section>
 
-    <h2 class="section-title" id="gallery">Gallery — Before & After</h2>
-    <div class="gallery">
-      <div class="gallery-item"><img src="gallery/before1.jpg" alt="Before work"><img src="gallery/after1.jpg" alt="After work"></div>
-      <div class="gallery-item"><img src="gallery/before2.jpg" alt="Before work"><img src="gallery/after2.jpg" alt="After work"></div>
-      <div class="gallery-item"><img src="gallery/before3.jpg" alt="Before work"><img src="gallery/after3.jpg" alt="After work"></div>
-      <p class="small">Replace these images with your real before/after photos in the <code>/gallery/</code> folder.</p>
+  <section id="reviews" class="section container">
+    <h2>Client Reviews</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Sophia</h3>
+        <p>Restored my bathtub — looks like new. Very satisfied!</p>
+      </div>
+      <div class="card">
+        <h3>Michael</h3>
+        <p>Fast and professional. Mounted my TV and assembled furniture.</p>
+      </div>
     </div>
 
-    <h2 class="section-title" id="testimonials">Client Testimonials</h2>
-    <div id="reviews"></div>
-    <!-- Button to invite visitors to leave their own review -->
-    <div style="margin-top:12px;">
-      <a class="btn" href="#leave-review">Оставить отзыв</a>
+    <div class="card" style="margin-top:16px">
+      <h3>Leave a Review</h3>
+      <form id="review-form" name="reviews" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="reviews">
+        <label for="r-name">Name</label>
+        <input class="input" id="r-name" name="name" placeholder="Your name">
+        <label for="r-rating">Rating</label>
+        <select id="r-rating" name="rating" class="input">
+          <option value="5">5 — Excellent</option>
+          <option value="4">4 — Good</option>
+          <option value="3">3 — Okay</option>
+          <option value="2">2 — Poor</option>
+          <option value="1">1 — Bad</option>
+        </select>
+        <label for="r-text">Review</label>
+        <textarea id="r-text" name="review" placeholder="Share your experience"></textarea>
+        <div class="row" style="margin-top:12px">
+          <input type="submit" class="btn" value="Submit Review">
+        </div>
+      </form>
     </div>
+  </section>
 
-    <!-- Booking section: allow visitors to reserve a date & time -->
-    <h2 class="section-title" id="booking">Бронирование</h2>
-    <p>Заполните форму, чтобы выбрать удобную дату и время. Мы свяжемся с вами для подтверждения.</p>
-    <form class="form" name="booking" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="booking">
-      <!-- Honeypot field for bots -->
-      <p style="display:none">
-        <label>Don’t fill this out if you're human: <input name="bot-field"></label>
-      </p>
-      <div class="row">
-        <div>
-          <label>Имя</label>
-          <input type="text" name="name" placeholder="Ваше имя" required>
-        </div>
-        <div>
-          <label>Телефон</label>
-          <input type="tel" name="phone" placeholder="+1 (___) ___-____" required>
-        </div>
-      </div>
-      <div class="row">
-        <div>
-          <label>Email</label>
-          <input type="email" name="email" placeholder="Ваш email" required>
-        </div>
-        <div>
-          <label>Дата</label>
-          <input type="date" name="date" required>
-        </div>
-      </div>
-      <div class="row">
-        <div>
-          <label>Время</label>
-          <input type="time" name="time" required>
-        </div>
-      </div>
-      <label>Комментарий / Тип услуги</label>
-      <textarea name="details" rows="4" placeholder="Например: сборка кухонного гарнитура"></textarea>
-      <div class="actions" style="margin-top:12px;">
-        <button class="btn" type="submit">Забронировать</button>
-      </div>
-    </form>
-    <p class="small">После отправки ваш запрос будет обработан, и мы подтвердим бронь по телефону или email.</p>
+  <section id="booking" class="section container">
+    <h2>Booking</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Request a time</h3>
+        <form id="booking-form" name="booking" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="booking">
+          <label for="b-name">Name</label>
+          <input id="b-name" class="input" name="name" placeholder="Your name" required>
 
-    <h2 class="section-title" id="contact">Contact</h2>
-    <form class="form" action="mailto:borvlsp@gmail.com" method="post" enctype="text/plain">
-      <div class="row">
-        <div><label>Name</label><input name="name" required></div>
-        <div><label>Phone</label><input name="phone" placeholder="+1 (___) ___-____"></div>
-      </div>
-      <label>Service</label>
-      <input name="service" placeholder="e.g., TV Mounting, Furniture Restoration" required>
-      <label>Details</label>
-      <textarea name="details" rows="4" placeholder="Tell me about your project"></textarea>
-      <div class="actions">
-        <button class="btn" type="submit">Send</button>
-        <a class="btn ghost" href="https://wa.me/15551234567" target="_blank">Chat on WhatsApp</a>
-      </div>
-    </form>
+          <label for="b-phone">Phone</label>
+          <input id="b-phone" class="input" name="phone" placeholder="+1 (___) ___‑____" required>
 
-    <!-- Review submission form -->
-    <h2 class="section-title" id="leave-review">Оставить отзыв</h2>
-    <form class="form" action="mailto:borvlsp@gmail.com" method="post" enctype="text/plain">
-      <div class="row">
-        <div>
-          <label>Имя</label>
-          <input name="name" placeholder="Ваше имя" required>
-        </div>
-        <div>
-          <label>Оценка</label>
-          <!-- rating as dropdown from 1 to 5 -->
-          <select name="rating" required style="width:100%;padding:10px 12px;border-radius:10px;border:1px solid #2b3645;background:#0b0c10;color:#e6f7f6">
-            <option value="" disabled selected>Выберите</option>
-            <option value="5">5 ★</option>
-            <option value="4">4 ★</option>
-            <option value="3">3 ★</option>
-            <option value="2">2 ★</option>
-            <option value="1">1 ★</option>
-          </select>
-        </div>
-      </div>
-      <label>Отзыв</label>
-      <textarea name="review" rows="4" placeholder="Поделитесь своим опытом" required></textarea>
-      <div class="actions">
-        <button class="btn" type="submit">Отправить отзыв</button>
-      </div>
-    </form>
-  </main>
+          <label for="b-email">Email</label>
+          <input id="b-email" class="input" name="email" placeholder="you@example.com">
 
-  <footer>
-    <div class="container">© 2025 Barbaris Handyman Services. Built with plain HTML/CSS/JS.</div>
+          <div class="row">
+            <div>
+              <label for="b-date">Date</label>
+              <input id="b-date" class="input" type="date" name="date">
+            </div>
+            <div>
+              <label for="b-time">Time</label>
+              <input id="b-time" class="input" type="time" name="time">
+            </div>
+          </div>
+
+          <label for="b-details">Details / Service</label>
+          <textarea id="b-details" class="input" name="details" placeholder="e.g., Kitchen cabinet assembly"></textarea>
+
+          <div class="row" style="margin-top:12px">
+            <input type="submit" class="btn" value="Send">
+            <a id="wa-btn" class="btn secondary" href="#" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          </div>
+          <p style="margin-top:8px;color:#9fb7c7">After submission, we’ll confirm by phone or email. You’ll also be able to chat on WhatsApp.</p>
+        </form>
+      </div>
+      <div class="card">
+        <h3>Quick contacts</h3>
+        <p><strong>Phone / WhatsApp:</strong> <a href="https://wa.me/18186673778" target="_blank">+1 (818) 667‑3778</a></p>
+        <p><strong>Service area:</strong> Los Angeles & nearby</p>
+        <p><strong>Hours:</strong> Mon–Sun, 8:00–20:00</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © 2025 Barbaris Handyman Services. Built with HTML/CSS/JS.
   </footer>
 
-  <script src="script.js"></script>
+<script>
+// Build WhatsApp link with form data
+function buildWhatsAppMessage(){
+  const name = document.getElementById('b-name').value.trim();
+  const phone = document.getElementById('b-phone').value.trim();
+  const date = document.getElementById('b-date').value;
+  const time = document.getElementById('b-time').value;
+  const details = document.getElementById('b-details').value.trim();
+  const parts = [
+    "Hello Boris! I'd like to book a service.",
+    name ? "\nName: " + name : "",
+    phone ? "\nPhone: " + phone : "",
+    (date||time) ? "\nWhen: " + [date,time].filter(Boolean).join(" ") : "",
+    details ? "\nDetails: " + details : ""
+  ].join("");
+  const text = encodeURIComponent(parts);
+  return "https://wa.me/18186673778?text=" + text;
+}
+document.getElementById('wa-btn').addEventListener('click', function(e){
+  this.href = buildWhatsAppMessage();
+});
+</script>
 </body>
 </html>
