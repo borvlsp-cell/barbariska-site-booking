@@ -1,0 +1,94 @@
+
+/* Base styles from previous version */
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;background:#0b0c10;color:#111;}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;background:#1f2833;position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(255,255,255,0.06)}
+.brand{display:flex;gap:12px;align-items:center;font-weight:700;color:#fff}
+.badge-dot{width:10px;height:10px;border-radius:50%;background:#66fcf1;display:inline-block}
+.cta{display:flex;gap:12px;align-items:center}
+.btn{padding:10px 16px;border-radius:10px;
+  /* Use neutral white buttons with dark chocolate text */
+  background:#ffffff;
+  color:#4d2a1a;
+  border:1px solid #4d2a1a;
+  font-weight:600;
+  cursor:pointer;
+  text-align:center;
+  display:inline-block;
+  transition:background 0.2s,color 0.2s,border-color 0.2s;
+}
+/* Ghost variant retains transparent background but uses the same dark chocolate colour for text and border */
+.btn.ghost{
+  background:transparent;
+  color:#4d2a1a;
+  border:1px solid #4d2a1a;
+}
+/* Hover styles to improve accessibility */
+.btn:hover{
+  background:#f0e6e0;
+  color:#4d2a1a;
+  border-color:#4d2a1a;
+}
+.btn.ghost:hover{
+  background:#f0e6e0;
+  color:#4d2a1a;
+}
+.hero{padding:56px 24px;background:linear-gradient(180deg,#0b0c10 0%,#0b0c10 40%,#12161d 100%);color:#e6f7f6}
+.hero h1{margin:0 0 12px;font-size:36px;letter-spacing:.2px}
+.hero .slogan{color:#66fcf1;font-weight:500;margin-bottom:16px}
+.kpis{display:flex;gap:16px;margin-top:24px;flex-wrap:wrap}
+.kpi{background:#1f2833;border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:12px 16px;color:#cfe9e7}
+.kpi strong{display:block;color:#66fcf1;font-size:18px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 0}
+.chip{border:1px solid #2b3645;border-radius:999px;padding:8px 12px;color:#cfe9e7;cursor:pointer}
+.chip.active{border-color:#66fcf1;color:#66fcf1}
+.grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:14px;margin:20px 0 40px}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(min-width:980px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+.card{background:#ffffff;border:1px solid #ebeff3;border-radius:14px;padding:16px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.card h3{margin:0 0 4px;font-size:16px;color:#0b1620}
+.card .cat{color:#6b7785;font-size:12px}
+.rate{padding:8px 12px;border-radius:999px;background:#e8f7f6;color:#046a64;border:1px solid #bde9e6;font-weight:700;white-space:nowrap}
+.badges{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.b{font-size:10px;padding:4px 8px;border-radius:999px;border:1px solid #dfe7ef;color:#405164;background:#f4f7fb}
+.b.in{background:#e8fff7;border-color:#b8f5df;color:#006a48}
+.b.pa{background:#f2ecff;border-color:#d5c8ff;color:#51459c}
+.section-title{margin:34px 0 8px;color:#cfe9e7}
+footer{padding:24px;background:#0b0c10;border-top:1px solid rgba(255,255,255,0.06);color:#a9bdba}
+.form{background:#10161f;border:1px solid #1f2833;border-radius:14px;padding:16px}
+.form label{display:block;color:#cfe9e7;font-size:14px;margin:8px 0 4px}
+.form input,.form textarea{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #2b3645;background:#0b0c10;color:#e6f7f6}
+.form .row{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:700px){.form .row{grid-template-columns:1fr 1fr}}
+.form .actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+.small{font-size:12px;color:#8fa5a3}
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:20px 0}
+.gallery-item{display:flex;flex-direction:column;gap:6px}
+.gallery-item img{width:100%;border-radius:10px;border:1px solid #2b3645}
+/* Testimonials */
+.review{background:#1f2833;border-radius:12px;padding:16px;color:#cfe9e7;margin-bottom:12px}
+.review strong{display:block;color:#66fcf1;margin-bottom:6px}
+
+/* Seasonal themes
+   These classes are applied to the <body> element via JavaScript depending on the current month.
+   They adjust the page background for different times of the year. Feel free to tweak the colours.
+*/
+.theme-spring body,
+body.theme-spring {
+  background:#f0faf5;
+}
+.theme-summer body,
+body.theme-summer {
+  background:#fff9e6;
+}
+.theme-autumn body,
+body.theme-autumn {
+  background:#fbf5ef;
+}
+.theme-winter body,
+body.theme-winter {
+  background:#f0f6fc;
+}

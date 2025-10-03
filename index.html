@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barbaris Handyman Services</title>
+  <meta name="description" content="Barbaris Handyman Services — Restoration, Yard Work, Home Repairs, Furniture Assembly.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><span class="badge-dot"></span> Barbaris Handyman Services</div>
+    <div class="cta">
+      <a class="btn ghost" href="#services">Services & Prices</a>
+      <a class="btn" href="#contact">Get a Quote</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Barbaris Handyman Services</h1>
+      <p class="slogan">Restoration • Yard Work • Home Repairs • Furniture Assembly</p>
+      <div class="kpis">
+        <div class="kpi"><strong>+1000</strong> tasks completed</div>
+        <div class="kpi"><strong>4.9★</strong> average rating</div>
+        <div class="kpi"><strong>Same-day</strong> availability</div>
+      </div>
+      <div class="filters" id="filters"></div>
+      <div class="row"><a class="btn" href="#contact">Book now</a><a class="btn ghost" href="#services">Browse services</a></div>
+    </div>
+  </section>
+
+  <main class="container">
+    <h2 class="section-title" id="services">Services & Prices</h2>
+    <div class="grid" id="grid"></div>
+
+    <h2 class="section-title" id="gallery">Gallery — Before & After</h2>
+    <div class="gallery">
+      <div class="gallery-item"><img src="gallery/before1.jpg" alt="Before work"><img src="gallery/after1.jpg" alt="After work"></div>
+      <div class="gallery-item"><img src="gallery/before2.jpg" alt="Before work"><img src="gallery/after2.jpg" alt="After work"></div>
+      <div class="gallery-item"><img src="gallery/before3.jpg" alt="Before work"><img src="gallery/after3.jpg" alt="After work"></div>
+      <p class="small">Replace these images with your real before/after photos in the <code>/gallery/</code> folder.</p>
+    </div>
+
+    <h2 class="section-title" id="testimonials">Client Testimonials</h2>
+    <div id="reviews"></div>
+    <!-- Button to invite visitors to leave their own review -->
+    <div style="margin-top:12px;">
+      <a class="btn" href="#leave-review">Оставить отзыв</a>
+    </div>
+
+    <!-- Booking section: allow visitors to reserve a date & time -->
+    <h2 class="section-title" id="booking">Бронирование</h2>
+    <p>Заполните форму, чтобы выбрать удобную дату и время. Мы свяжемся с вами для подтверждения.</p>
+    <form class="form" name="booking" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="booking">
+      <!-- Honeypot field for bots -->
+      <p style="display:none">
+        <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+      </p>
+      <div class="row">
+        <div>
+          <label>Имя</label>
+          <input type="text" name="name" placeholder="Ваше имя" required>
+        </div>
+        <div>
+          <label>Телефон</label>
+          <input type="tel" name="phone" placeholder="+1 (___) ___-____" required>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label>Email</label>
+          <input type="email" name="email" placeholder="Ваш email" required>
+        </div>
+        <div>
+          <label>Дата</label>
+          <input type="date" name="date" required>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label>Время</label>
+          <input type="time" name="time" required>
+        </div>
+      </div>
+      <label>Комментарий / Тип услуги</label>
+      <textarea name="details" rows="4" placeholder="Например: сборка кухонного гарнитура"></textarea>
+      <div class="actions" style="margin-top:12px;">
+        <button class="btn" type="submit">Забронировать</button>
+      </div>
+    </form>
+    <p class="small">После отправки ваш запрос будет обработан, и мы подтвердим бронь по телефону или email.</p>
+
+    <h2 class="section-title" id="contact">Contact</h2>
+    <form class="form" action="mailto:borvlsp@gmail.com" method="post" enctype="text/plain">
+      <div class="row">
+        <div><label>Name</label><input name="name" required></div>
+        <div><label>Phone</label><input name="phone" placeholder="+1 (___) ___-____"></div>
+      </div>
+      <label>Service</label>
+      <input name="service" placeholder="e.g., TV Mounting, Furniture Restoration" required>
+      <label>Details</label>
+      <textarea name="details" rows="4" placeholder="Tell me about your project"></textarea>
+      <div class="actions">
+        <button class="btn" type="submit">Send</button>
+        <a class="btn ghost" href="https://wa.me/15551234567" target="_blank">Chat on WhatsApp</a>
+      </div>
+    </form>
+
+    <!-- Review submission form -->
+    <h2 class="section-title" id="leave-review">Оставить отзыв</h2>
+    <form class="form" action="mailto:borvlsp@gmail.com" method="post" enctype="text/plain">
+      <div class="row">
+        <div>
+          <label>Имя</label>
+          <input name="name" placeholder="Ваше имя" required>
+        </div>
+        <div>
+          <label>Оценка</label>
+          <!-- rating as dropdown from 1 to 5 -->
+          <select name="rating" required style="width:100%;padding:10px 12px;border-radius:10px;border:1px solid #2b3645;background:#0b0c10;color:#e6f7f6">
+            <option value="" disabled selected>Выберите</option>
+            <option value="5">5 ★</option>
+            <option value="4">4 ★</option>
+            <option value="3">3 ★</option>
+            <option value="2">2 ★</option>
+            <option value="1">1 ★</option>
+          </select>
+        </div>
+      </div>
+      <label>Отзыв</label>
+      <textarea name="review" rows="4" placeholder="Поделитесь своим опытом" required></textarea>
+      <div class="actions">
+        <button class="btn" type="submit">Отправить отзыв</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <div class="container">© 2025 Barbaris Handyman Services. Built with plain HTML/CSS/JS.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

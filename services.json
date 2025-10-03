@@ -1,0 +1,149 @@
+[
+  {
+    "category": "Cleaning",
+    "name": "Cleaning",
+    "rate": "$65/hr",
+    "badges": [
+      "IN DEMAND"
+    ]
+  },
+  {
+    "category": "Outdoor Maintenance",
+    "name": "Branch & Hedge Trimming",
+    "rate": "$67/hr"
+  },
+  {
+    "category": "Snow & Yard",
+    "name": "Snow Removal",
+    "rate": "$43/hr"
+  },
+  {
+    "category": "Snow & Yard",
+    "name": "Yard Work",
+    "rate": "$57/hr",
+    "badges": [
+      "IN DEMAND"
+    ]
+  },
+  {
+    "category": "Assembly",
+    "name": "IKEA Assembly",
+    "rate": "Task-Based"
+  },
+  {
+    "category": "Mounting",
+    "name": "General Mounting",
+    "rate": "$47/hr",
+    "badges": [
+      "IN DEMAND",
+      "PARTNERS"
+    ]
+  },
+  {
+    "category": "Mounting",
+    "name": "TV Mounting",
+    "rate": "$54/hr",
+    "badges": [
+      "IN DEMAND"
+    ]
+  },
+  {
+    "category": "Painting",
+    "name": "Concrete & Brick Painting",
+    "rate": "$53/hr"
+  },
+  {
+    "category": "Painting",
+    "name": "Indoor Painting",
+    "rate": "$43/hr"
+  },
+  {
+    "category": "Painting",
+    "name": "Outdoor Painting",
+    "rate": "$45/hr"
+  },
+  {
+    "category": "Painting",
+    "name": "Wallpapering",
+    "rate": "$41/hr"
+  },
+  {
+    "category": "Home Improvements",
+    "name": "Appliance Installation & Repairs",
+    "rate": "$73/hr",
+    "badges": [
+      "IN DEMAND"
+    ]
+  },
+  {
+    "category": "Home Improvements",
+    "name": "Babyproofing",
+    "rate": "$55/hr"
+  },
+  {
+    "category": "Home Improvements",
+    "name": "Door, Cabinet, & Furniture Repair",
+    "rate": "$55/hr"
+  },
+  {
+    "category": "Home Improvements",
+    "name": "Electrical help",
+    "rate": "$41/hr",
+    "badges": [
+      "IN DEMAND",
+      "PARTNERS"
+    ]
+  },
+  {
+    "category": "Home Improvements",
+    "name": "Flooring & Tiling Help",
+    "rate": "$56/hr"
+  },
+  {
+    "category": "Home Improvements",
+    "name": "Light Carpentry",
+    "rate": "$48/hr",
+    "badges": [
+      "PARTNERS"
+    ]
+  },
+  {
+    "category": "Home Improvements",
+    "name": "Minor Home Repairs",
+    "rate": "$39/hr"
+  },
+  {
+    "category": "Home Improvements",
+    "name": "Plumbing help",
+    "rate": "$53/hr",
+    "badges": [
+      "IN DEMAND",
+      "PARTNERS"
+    ]
+  },
+  {
+    "category": "Home Improvements",
+    "name": "Wall Repair",
+    "rate": "$41/hr"
+  },
+  {
+    "category": "Other",
+    "name": "Automotive",
+    "rate": "$43/hr"
+  },
+  {
+    "category": "Restoration",
+    "name": "Furniture Restoration",
+    "rate": "from $65/hr"
+  },
+  {
+    "category": "Restoration",
+    "name": "Floor Restoration",
+    "rate": "from $60/hr"
+  },
+  {
+    "category": "Restoration",
+    "name": "Bathtub Refinishing",
+    "rate": "from $85/hr"
+  }
+]
