@@ -1,386 +1,177 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Barbaris Handyman — Los Angeles • Irvine • Orange County</title>
-<meta name="description" content="Handyman & restoration: kitchens, bathrooms, furniture. Serving Los Angeles, Irvine, Pomona, Pasadena, Riverside, San Bernardino, Anaheim, Orange County, and nearby areas.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barbariska Handyman — Booking & Restoration</title>
+  <link rel="stylesheet" href="styles.css?v=final1">
+  <script defer src="script.js?v=final1"></script>
 </head>
 <body>
-<header class="site-header">
-  <div class="brand">
-    <span class="dot"></span>
-    <h1>Barbaris Handyman Services</h1>
+<header class="hero">
+  <div class="wrap topbar">
+    <div class="brand"><span class="dot"></span> Barbariska <small>Handyman</small></div>
+    <nav class="actions">
+      <a class="pill" href="https://wa.me/18186673778" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="pill" href="mailto:borvlsp@gmail.com">Email</a>
+      <a class="pill outline" href="tel:+18186673778">Call Boris</a>
+    </nav>
   </div>
-  <nav class="cta">
-    <a class="btn btn-outline" href="https://wa.me/18186673778?text=Hello%2C%20I%27d%20like%20to%20book%20a%20handyman%20service." target="_blank" rel="noopener">WhatsApp</a>
-    <a class="btn btn-outline" href="mailto:borvlsp@gmail.com?subject=Handyman%20booking">Email</a>
-    <a class="btn btn-outline" href="tel:+18186673778">Call Boris</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="hero-inner">
-    <h2>Premium restoration & reliable handyman</h2>
-    <p class="muted">Serving Los Angeles • Irvine • Orange County</p>
-    <div class="hero-actions">
-      <a href="#booking" class="btn btn-solid">Book Now</a>
-      <a href="#services" class="btn btn-ghost">See Services</a>
-      <a href="#restoration" class="btn btn-solid" data-big="1">Request Estimate</a>
+  <div class="wrap hero-copy">
+    <h1>Premium Restoration & Reliable Handyman</h1>
+    <p class="sub">Los Angeles • Irvine • Orange County & Nearby</p>
+    <div class="cta-row">
+      <a class="btn btn-rose" href="#booking">Book Now</a>
+      <a class="btn btn-ghost" href="#estimate">Get Estimate</a>
+      <a class="btn btn-ghost" href="#work">Before / After</a>
     </div>
   </div>
-</section>
+</header>
 
-<main>
+<main class="wrap">
+  <!-- Booking -->
   <section id="booking" class="card">
-    <h3>Booking</h3>
-    <p class="muted">We reply via phone / WhatsApp / email. You’ll also see a confirmation on this page.</p>
-
-    <form id="booking-form" name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <h2>Booking</h2>
+    <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="booking">
-      <p class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field"></label></p>
-
-      <div class="grid">
-        <label>Name<input name="name" required placeholder="Your full name"></label>
-        <label>Phone<input name="phone" type="tel" inputmode="tel" placeholder="+1 818 667-3778" required></label>
-        <label>Email<input name="email" type="email" placeholder="name@example.com" required></label>
-
+      <p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
+      <div class="grid two">
+        <label>Name <input name="name" required placeholder="Your name"></label>
+        <label>Phone <input name="phone" required placeholder="+1 818 667-3778"></label>
+        <label>Email <input name="email" required type="email" placeholder="you@example.com"></label>
+        <label>Date <input name="date" required type="date"></label>
+        <label>Time <input name="time" required type="time"></label>
         <label>Service
-          <select name="service" id="service" required>
-            <option value="General Handyman">General Handyman</option>
-            <option value="IKEA Assembly">IKEA Assembly</option>
-            <option value="Cleaning">Cleaning</option>
-            <option value="Light Carpentry">Light Carpentry</option>
-            <option value="Appliance Install/Repair">Appliance Install/Repair</option>
-            <option value="Door/Cabinet/Furniture Repair">Door/Cabinet/Furniture Repair</option>
-            <option value="Electrical help">Electrical help</option>
-            <option value="TV Mounting">TV Mounting</option>
-            <option value="Plumbing help">Plumbing help</option>
-            <option value="Flooring & Tiling">Flooring & Tiling</option>
-            <option value="Concrete/Brick Painting">Concrete/Brick Painting</option>
-            <option value="Indoor/Outdoor Painting">Indoor/Outdoor Painting</option>
-            <option value="Yard Work">Yard Work</option>
-            <option value="Branch & Hedge Trimming">Branch & Hedge Trimming</option>
-            <option value="Power Washing">Power Washing</option>
-            <option value="Restoration">Restoration</option>
+          <select name="service">
+            <option>General Handyman</option>
+            <option>Kitchen Cabinet Restoration</option>
+            <option>Bathtub Reglazing</option>
+            <option>Furniture / Door Restoration</option>
+            <option>Assembly & Mounting</option>
+            <option>Home Improvements</option>
+            <option>Outdoor Maintenance</option>
+            <option>Cleaning</option>
           </select>
         </label>
-
-        <label>Preferred date<input name="date" type="date" required></label>
-
-        <label>Preferred time
-          <select id="time_display" required>
-            <option value="">Select time</option>
-            <option value="06:00">6:00 AM</option>
-            <option value="06:30">6:30 AM</option>
-            <option value="07:00">7:00 AM</option>
-            <option value="07:30">7:30 AM</option>
-            <option value="08:00">8:00 AM</option>
-            <option value="08:30">8:30 AM</option>
-            <option value="09:00">9:00 AM</option>
-            <option value="09:30">9:30 AM</option>
-            <option value="10:00">10:00 AM</option>
-            <option value="10:30">10:30 AM</option>
-            <option value="11:00">11:00 AM</option>
-            <option value="11:30">11:30 AM</option>
-            <option value="12:00">12:00 PM</option>
-            <option value="12:30">12:30 PM</option>
-            <option value="13:00">1:00 PM</option>
-            <option value="13:30">1:30 PM</option>
-            <option value="14:00">2:00 PM</option>
-            <option value="14:30">2:30 PM</option>
-            <option value="15:00">3:00 PM</option>
-            <option value="15:30">3:30 PM</option>
-            <option value="16:00">4:00 PM</option>
-            <option value="16:30">4:30 PM</option>
-            <option value="17:00">5:00 PM</option>
-            <option value="17:30">5:30 PM</option>
-            <option value="18:00">6:00 PM</option>
-            <option value="18:30">6:30 PM</option>
-            <option value="19:00">7:00 PM</option>
-            <option value="19:30">7:30 PM</option>
-            <option value="20:00">8:00 PM</option>
-            <option value="20:30">8:30 PM</option>
-            <option value="21:00">9:00 PM</option>
-          </select>
-          <input type="hidden" name="time" id="time">
-        </label>
-
-        <label>Project size
-          <select name="project_size" id="project_size">
-            <option value="standard">Standard</option>
-            <option value="large">Large project (estimate)</option>
-          </select>
-        </label>
+        <label class="full">Message <textarea name="message" placeholder="Short details"></textarea></label>
       </div>
-
-      <label>Details / Message
-        <textarea name="message" rows="4" placeholder="Describe the job (what, where, access, parking, photos/links if any)"></textarea>
-      </label>
-
-      <div class="actions-row">
-        <button class="btn btn-solid" type="submit">Send Request</button>
-        <button class="btn btn-ghost" type="button" id="invoice-btn">Request Invoice by Email</button>
-      </div>
-      <p id="booking-result" class="result"></p>
+      <button class="btn btn-rose" type="submit">Send Booking</button>
+      <a class="btn btn-ghost" href="https://wa.me/18186673778?text=Hello! I'd like to book." target="_blank" rel="noopener">Chat on WhatsApp</a>
     </form>
   </section>
 
-  <section id="services" class="card">
-    <h3>Services & Prices</h3>
-    <div class="accordion">
-
-      <details id="restoration" open>
-        <summary>Restoration — Kitchens, Bathrooms & More</summary>
-        <div class="resto-box">
-          <label>Choose category</label>
-          <select id="resto-type">
-            <option value="">Select...</option>
-            <option value="kitchen">Kitchen</option>
-            <option value="bathroom">Bathtub</option>
-            <option value="other">Furniture / Door</option>
-          </select>
-
-          <div id="kitchen-estimator" class="hidden calc-card">
-            <h4>Kitchen Cabinet Restoration — quick estimate</h4>
-            <div class="calc-grid">
-              <label>Kitchen size (front surface, sq ft)
-                <input id="k-size" type="number" min="20" step="5" placeholder="e.g., 120">
-              </label>
-              <label>Don’t know the size?
-                <select id="k-preset">
-                  <option value="">Choose a typical kitchen...</option>
-                  <option value="100">Small (≈100 sq ft fronts)</option>
-                  <option value="180">Medium (≈180 sq ft fronts)</option>
-                  <option value="260">Large (≈260 sq ft fronts)</option>
-                </select>
-              </label>
-              <label>Condition / scope
-                <select id="k-scope">
-                  <option value="light">Light repaint (few defects)</option>
-                  <option value="standard" selected>Standard refinish (fill, sand, hinge adj.)</option>
-                  <option value="premium">Premium / complex profiles</option>
-                </select>
-              </label>
-            </div>
-            <p class="muted tiny">Pricing (LA & OC): <b>$4–$6</b> light, <b>$8–$12</b> standard, <b>$15+</b> premium. Minimum total <b>$800</b>.</p>
-            <div class="estimate-row">
-              <div>
-                <div class="est-label">Estimated range</div>
-                <div id="k-out" class="est-value">—</div>
-              </div>
-              <div class="est-actions">
-                <button type="button" class="btn btn-solid" id="k-add-to-booking">Request estimate & invoice</button>
-              </div>
-            </div>
-          </div>
-
-          <details class="calc" open>
-            <summary>Kitchen Cabinet Restoration — $800 – $5,500</summary>
-            <div class="calc-body">
-              <label>Cabinet area (sq ft)
-                <input type="number" id="k_area" min="10" step="5" value="60" required>
-              </label>
-              <label>Finish
-                <select id="k_finish">
-                  <option value="15">Enamel paint ($15/sq ft)</option>
-                  <option value="22">Acrylic ($22/sq ft)</option>
-                  <option value="30">Epoxy premium ($30/sq ft)</option>
-                </select>
-              </label>
-              <label>Extras
-                <select id="k_extra">
-                  <option value="0">None</option>
-                  <option value="150">Hardware replacement (+$150)</option>
-                  <option value="300">Minor wood repair (+$300)</option>
-                </select>
-              </label>
-              <div class="calc-total">Approximate total: <b id="k_total">$0</b></div>
-              <button type="button" class="btn chocolate" onclick="sendEstimate('Kitchen')">Get Estimate by Email</button>
-            </div>
-          </details>
-
-          <details class="calc">
-            <summary>Bathtub Refinishing / Reglazing — $480 – $1,200</summary>
-            <div class="calc-body">
-              <label>Tub size
-                <select id="b_size">
-                  <option value="480">Standard ($480)</option>
-                  <option value="650">Large ($650)</option>
-                  <option value="900">Corner/Custom ($900)</option>
-                </select>
-              </label>
-              <label>Coating
-                <select id="b_coat">
-                  <option value="0">Acrylic (included)</option>
-                  <option value="180">Epoxy premium (+$180)</option>
-                </select>
-              </label>
-              <label>Old coating removal
-                <select id="b_strip">
-                  <option value="0">No</option>
-                  <option value="120">Yes (+$120)</option>
-                </select>
-              </label>
-              <div class="calc-total">Approximate total: <b id="b_total">$0</b></div>
-              <button type="button" class="btn chocolate" onclick="sendEstimate('Bathtub')">Get Estimate by Email</button>
-            </div>
-          </details>
-
-          <details class="calc">
-            <summary>Furniture / Door / Wood Restoration — $250 – $1,800</summary>
-            <div class="calc-body">
-              <label>Item
-                <select id="w_item">
-                  <option value="door">Door</option>
-                  <option value="table">Table</option>
-                  <option value="cabinet">Cabinet</option>
-                </select>
-              </label>
-              <label>Area (sq ft)
-                <input type="number" id="w_area" min="5" step="5" value="20">
-              </label>
-              <label>Material
-                <select id="w_rate">
-                  <option value="10">Veneer/MDF ($10/sq ft)</option>
-                  <option value="18">Solid wood ($18/sq ft)</option>
-                  <option value="25">Premium finish ($25/sq ft)</option>
-                </select>
-              </label>
-              <div class="calc-total">Approximate total: <b id="w_total">$0</b></div>
-              <button type="button" class="btn chocolate" onclick="sendEstimate('Wood')">Get Estimate by Email</button>
-            </div>
-          </details>
-
-          <ul class="resto-table">
-            <li><b>Kitchen Cabinet Restoration</b> — $800 – $5,500</li>
-            <li><b>Bathtub Refinishing / Reglazing</b> — $480 – $1,200</li>
-            <li><b>Furniture / Door / Wood Restoration</b> — $250 – $1,800</li>
-          </ul>
-        </div>
-      </details>
-
-      <details>
-        <summary>Assembly & Mounting</summary>
-        <ul>
-          <li>IKEA Assembly — <b>Task-Based</b></li>
-          <li>TV Mounting — <b>$54/hr</b></li>
-          <li>General Mounting — <b>$47/hr</b></li>
-        </ul>
-      </details>
-      <details>
-        <summary>Home Improvements</summary>
-        <ul>
-          <li>Light Carpentry — <b>$48/hr</b></li>
-          <li>Minor Home Repairs — <b>$39/hr</b></li>
-          <li>Door, Cabinet & Furniture Repair — <b>$55/hr</b></li>
-          <li>Electrical help — <b>$41/hr</b></li>
-          <li>Plumbing help — <b>$53/hr</b></li>
-          <li>Flooring & Tiling Help — <b>$56/hr</b></li>
-          <li>Concrete & Brick Painting — <b>$53/hr</b></li>
-          <li>Indoor Painting — <b>$43/hr</b></li>
-          <li>Outdoor Painting — <b>$45/hr</b></li>
-          <li>Wallpapering — <b>$41/hr</b></li>
-        </ul>
-      </details>
-      <details>
-        <summary>Outdoor Maintenance</summary>
-        <ul>
-          <li>Branch & Hedge Trimming — <b>$67/hr</b></li>
-          <li>Landscaping Help — <b>$68/hr</b></li>
-          <li>Power Washing — <b>$63/hr</b></li>
-          <li>Snow Removal — <b>$43/hr</b></li>
-          <li>Yard Work — <b>$57/hr</b></li>
-        </ul>
-      </details>
-      <details>
-        <summary>Cleaning</summary>
-        <ul>
-          <li>Cleaning — <b>$65/hr</b></li>
-        </ul>
-      </details>
+  <!-- Estimate -->
+  <section id="estimate" class="card">
+    <h2>Restoration — Quick Estimate</h2>
+    <div class="grid two">
+      <label>Category
+        <select id="cat">
+          <option value="kitchen">Kitchen cabinets</option>
+          <option value="bath">Bathtub</option>
+          <option value="wood">Furniture / Door / Wood</option>
+        </select>
+      </label>
+      <label>Area (sq ft) / tub size
+        <input id="area" type="number" min="0" step="1" value="60">
+      </label>
+      <label>Finish / Material
+        <select id="finish">
+          <option value="std">Standard</option>
+          <option value="enamel">Enamel paint</option>
+          <option value="premium">Premium / two-part</option>
+        </select>
+      </label>
+      <label>Extras
+        <select id="extras">
+          <option value="none">None</option>
+          <option value="strip">Old coating removal</option>
+          <option value="repairs">Minor repairs</option>
+        </select>
+      </label>
     </div>
+
+    <div class="total">Approximate total: <strong id="total">$0</strong></div>
+
+    <!-- Minimal contact fields for estimate email -->
+    <div class="grid two">
+      <label>Your name <input id="estName" placeholder="Your name"></label>
+      <label>Your email <input id="estEmail" type="email" placeholder="you@example.com"></label>
+      <label class="full">Comment (optional) <textarea id="estMsg" placeholder="Any notes for Boris"></textarea></label>
+    </div>
+    <button class="btn btn-rose" id="email-estimate">Get Estimate by Email</button>
   </section>
 
+  <!-- Before / After -->
   <section id="work" class="card">
-    <h3>My Work (Before / After)</h3>
-    <p class="muted tiny">Tap & drag the slider to compare</p>
+    <h2>My Work — Before / After</h2>
     <div class="ba-grid">
-      <div class="ba">
-        <img class="ba-img before" src="images/kitchen-before.jpg" alt="Kitchen before">
-        <div class="ba-after"><img class="ba-img after" src="images/kitchen-after.jpg" alt="Kitchen after"></div>
-        <input type="range" min="0" max="100" value="50" class="ba-slider" aria-label="Compare">
-        <div class="ba-labels"><span>Before</span><span>After</span></div>
-      </div>
-      <div class="ba">
-        <img class="ba-img before" src="images/bath-before.jpg" alt="Bath before">
-        <div class="ba-after"><img class="ba-img after" src="images/bath-after.jpg" alt="Bath after"></div>
-        <input type="range" min="0" max="100" value="50" class="ba-slider" aria-label="Compare">
-        <div class="ba-labels"><span>Before</span><span>After</span></div>
-      </div>
-      <div class="ba">
-        <img class="ba-img before" src="images/yard-before.jpg" alt="Yard before">
-        <div class="ba-after"><img class="ba-img after" src="images/yard-after.jpg" alt="Yard after"></div>
-        <input type="range" min="0" max="100" value="50" class="ba-slider" aria-label="Compare">
-        <div class="ba-labels"><span>Before</span><span>After</span></div>
-      </div>
+      <figure class="ba-pair">
+        <figcaption>Kitchen Restoration</figcaption>
+        <div class="ba-row">
+          <div class="ba-col">
+            <img src="images/kitchen-before.jpg" alt="Kitchen Before" loading="lazy">
+            <div class="ba-label">Before</div>
+          </div>
+          <div class="ba-col">
+            <img src="images/kitchen-after.jpg" alt="Kitchen After" loading="lazy">
+            <div class="ba-label">After</div>
+          </div>
+        </div>
+      </figure>
+
+      <figure class="ba-pair">
+        <figcaption>Bathtub Reglazing</figcaption>
+        <div class="ba-row">
+          <div class="ba-col">
+            <img src="images/bath-before.jpg" alt="Bath Before" loading="lazy">
+            <div class="ba-label">Before</div>
+          </div>
+          <div class="ba-col">
+            <img src="images/bath-after.jpg" alt="Bath After" loading="lazy">
+            <div class="ba-label">After</div>
+          </div>
+        </div>
+      </figure>
+
+      <figure class="ba-pair">
+        <figcaption>Yard Cleanup</figcaption>
+        <div class="ba-row">
+          <div class="ba-col">
+            <img src="images/yard-before.jpg" alt="Yard Before" loading="lazy">
+            <div class="ba-label">Before</div>
+          </div>
+          <div class="ba-col">
+            <img src="images/yard-after.jpg" alt="Yard After" loading="lazy">
+            <div class="ba-label">After</div>
+          </div>
+        </div>
+      </figure>
     </div>
   </section>
 
-  <section id="service-area" class="card">
-    <h3>Service Area</h3>
-    <details class="service-area">
-      <summary>📍 Our Service Locations (tap to expand)</summary>
-      <p>We proudly serve the following areas of Southern California:</p>
-      <ul>
-        <li>Los Angeles</li>
-        <li>Irvine</li>
-        <li>Orange County</li>
-        <li>Pasadena</li>
-        <li>Pomona</li>
-        <li>Riverside</li>
-        <li>Anaheim</li>
-        <li>San Bernardino</li>
-        <li>West Covina</li>
-        <li>and nearby areas</li>
-      </ul>
-    </details>
-  </section>
-
+  <!-- Reviews -->
   <section id="reviews" class="card">
-    <h3>Leave a Review</h3>
-    <form name="review" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="review">
-      <p class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field"></label></p>
-      <div class="grid">
-        <label>Name<input name="name" required></label>
+    <h2>Leave a Review</h2>
+    <form name="review">
+      <div class="grid two">
+        <label>Name <input name="name" required></label>
+        <label>Email <input name="email" type="email" required></label>
         <label>Rating
           <select name="rating">
             <option>5 — Excellent</option>
             <option>4 — Good</option>
-            <option>3 — Okay</option>
-            <option>2 — Poor</option>
-            <option>1 — Bad</option>
+            <option>3 — OK</option>
           </select>
         </label>
+        <label class="full">Review <textarea name="review" placeholder="Share your experience"></textarea></label>
       </div>
-      <label>Review<textarea name="review" rows="4" placeholder="Share your experience"></textarea></label>
-      <button class="btn btn-ghost">Submit Review</button>
+      <button class="btn btn-rose" type="submit">Submit Review</button>
     </form>
-    <p class="muted tiny">To receive reviews by email, enable Email notification for the “review” form in Netlify → Forms → Notifications.</p>
   </section>
 </main>
 
-<footer class="site-footer">
-  <p>© 2025 Barbaris Handyman • Los Angeles • Irvine • Orange County • 6:00 AM–9:00 PM</p>
+<footer class="footer wrap">
+  © 2025 Barbariska Handyman • Los Angeles • Irvine • Orange County • 6:00–21:00
 </footer>
-
-<!-- Netlify honeypot for estimate capture -->
-<form name="estimate" netlify hidden><input name="dummy"></form>
-
-<script src="script.js"></script>
 </body>
 </html>
