@@ -1,0 +1,25 @@
+<!-- BEFORE / AFTER gallery -->
+<section id="before-after" class="section">
+  <h2>My Work — Before / After</h2>
+  <div class="ba-grid">
+    <figure class="ba-item">
+      <img src="images/kitchen-ba.jpg" alt="Kitchen restoration — before and after" loading="lazy">
+      <figcaption>Kitchen — before & after</figcaption>
+    </figure>
+    <figure class="ba-item">
+      <img src="images/bath-ba.jpg" alt="Bathtub reglazing — before and after" loading="lazy">
+      <figcaption>Bathtub — before & after</figcaption>
+    </figure>
+    <figure class="ba-item">
+      <img src="images/yard-ba.jpg" alt="Yard cleanup — before and after" loading="lazy">
+      <figcaption>Yard — before & after</figcaption>
+    </figure>
+  </div>
+</section>
+<style>
+  .ba-grid { display:grid; gap:16px; grid-template-columns: 1fr; }
+  @media (min-width: 720px) { .ba-grid { grid-template-columns: repeat(3,1fr);} }
+  .ba-item { background: rgba(255,255,255,0.02); border-radius: 12px; padding: 8px; }
+  .ba-item img { width: 100%; height: auto; border-radius: 8px; display:block; }
+  .ba-item figcaption { text-align:center; margin-top:8px; opacity:0.9; }
+</style>

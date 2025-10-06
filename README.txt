@@ -1,8 +1,12 @@
+BORABORA — BEFORE/AFTER PACK
 
-barbariska-emerald-rose
-- Emerald + light pink + chocolate + beige palette, high contrast
-- Booking with 12h picker (AM/PM) → 24h hidden value
-- Restoration calculators (Kitchen min $800, Bathtub, Furniture/Door)
-- Before/After slider gallery (replace images in /images)
-- Netlify Forms + function relay to Apps Script via GCAL_WEBHOOK_URL
-- Service Area dropdown with LA/Irvine/OC + nearby cities
+Included:
+- images/kitchen-ba.jpg
+- images/bath-ba.jpg
+- images/yard-ba.jpg
+- before-after.html (ready-to-paste HTML block)
+
+How to add (GitHub → Netlify):
+1) Upload the 3 JPGs into your repo's `images/` folder (create if missing).
+2) Open `index.html` and paste the content of `before-after.html` where you want the gallery.
+3) Commit changes; Netlify redeploys automatically.
