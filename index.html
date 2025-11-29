@@ -1,177 +1,198 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Barbariska Handyman — Booking & Restoration</title>
-  <link rel="stylesheet" href="styles.css?v=final1">
-  <script defer src="script.js?v=final1"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barbariska Handyman — Booking & Restoration</title>
+<link rel="stylesheet" href="styles.css?v=final1">
+<script defer src="script.js?v=final1"></script>
 </head>
 <body>
 <header class="hero">
-  <div class="wrap topbar">
-    <div class="brand"><span class="dot"></span> Barbariska <small>Handyman</small></div>
-    <nav class="actions">
-      <a class="pill" href="https://wa.me/18186673778" target="_blank" rel="noopener">WhatsApp</a>
-      <a class="pill" href="mailto:borvlsp@gmail.com">Email</a>
-      <a class="pill outline" href="tel:+18186673778">Call Boris</a>
-    </nav>
-  </div>
-  <div class="wrap hero-copy">
-    <h1>Premium Restoration & Reliable Handyman</h1>
-    <p class="sub">Los Angeles • Irvine • Orange County & Nearby</p>
-    <div class="cta-row">
-      <a class="btn btn-rose" href="#booking">Book Now</a>
-      <a class="btn btn-ghost" href="#estimate">Get Estimate</a>
-      <a class="btn btn-ghost" href="#work">Before / After</a>
-    </div>
-  </div>
+<div class="wrap topbar">
+<div class="brand"><span class="dot"></span> Barbariska <small>Handyman</small></div>
+<nav class="actions">
+<a class="pill" href="https://wa.me/18186673778" target="_blank" rel="noopener">WhatsApp</a>
+<a class="pill" href="mailto:borvlsp@gmail.com">Email</a>
+<a class="pill outline" href="tel:+18186673778">Call Boris</a>
+</nav>
+</div>
+<div class="wrap hero-copy">
+<h1>Premium Restoration & Reliable Handyman</h1>
+<p class="sub">Los Angeles • Irvine • Orange County & Nearby</p>
+<div class="cta-row">
+<a class="btn btn-rose" href="#booking">Book Now</a>
+<a class="btn btn-ghost" href="#estimate">Get Estimate</a>
+<a class="btn btn-ghost" href="#work">Before / After</a>
+</div>
+</div>
 </header>
 
 <main class="wrap">
-  <!-- Booking -->
-  <section id="booking" class="card">
-    <h2>Booking</h2>
-    <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="booking">
-      <p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
-      <div class="grid two">
-        <label>Name <input name="name" required placeholder="Your name"></label>
-        <label>Phone <input name="phone" required placeholder="+1 818 667-3778"></label>
-        <label>Email <input name="email" required type="email" placeholder="you@example.com"></label>
-        <label>Date <input name="date" required type="date"></label>
-        <label>Time <input name="time" required type="time"></label>
-        <label>Service
-          <select name="service">
-            <option>General Handyman</option>
-            <option>Kitchen Cabinet Restoration</option>
-            <option>Bathtub Reglazing</option>
-            <option>Furniture / Door Restoration</option>
-            <option>Assembly & Mounting</option>
-            <option>Home Improvements</option>
-            <option>Outdoor Maintenance</option>
-            <option>Cleaning</option>
-          </select>
-        </label>
-        <label class="full">Message <textarea name="message" placeholder="Short details"></textarea></label>
-      </div>
-      <button class="btn btn-rose" type="submit">Send Booking</button>
-      <a class="btn btn-ghost" href="https://wa.me/18186673778?text=Hello! I'd like to book." target="_blank" rel="noopener">Chat on WhatsApp</a>
-    </form>
-  </section>
+<!-- Booking -->
+<section id="booking" class="card">
+<h2>Booking</h2>
+<!-- ВКЛЮЧИЛ reCAPTCHA: добавлен data-netlify-recaptcha -->
+<form
+name="booking"
+method="POST"
+data-netlify="true"
+data-netlify-recaptcha="true"
+netlify-honeypot="bot-field"
+>
+<input type="hidden" name="form-name" value="booking">
+<p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
+<div class="grid two">
+<label>Name <input name="name" required placeholder="Your name"></label>
+<label>Phone <input name="phone" required placeholder="+1 818 667-3778"></label>
+<label>Email <input name="email" required type="email" placeholder="you@example.com"></label>
+<label>Date <input name="date" required type="date"></label>
+<label>Time <input name="time" required type="time"></label>
+<label>Service
+<select name="service">
+<option>General Handyman</option>
+<option>Kitchen Cabinet Restoration</option>
+<option>Bathtub Reglazing</option>
+<option>Furniture / Door Restoration</option>
+<option>Assembly & Mounting</option>
+<option>Home Improvements</option>
+<option>Outdoor Maintenance</option>
+<option>Cleaning</option>
+</select>
+</label>
 
-  <!-- Estimate -->
-  <section id="estimate" class="card">
-    <h2>Restoration — Quick Estimate</h2>
-    <div class="grid two">
-      <label>Category
-        <select id="cat">
-          <option value="kitchen">Kitchen cabinets</option>
-          <option value="bath">Bathtub</option>
-          <option value="wood">Furniture / Door / Wood</option>
-        </select>
-      </label>
-      <label>Area (sq ft) / tub size
-        <input id="area" type="number" min="0" step="1" value="60">
-      </label>
-      <label>Finish / Material
-        <select id="finish">
-          <option value="std">Standard</option>
-          <option value="enamel">Enamel paint</option>
-          <option value="premium">Premium / two-part</option>
-        </select>
-      </label>
-      <label>Extras
-        <select id="extras">
-          <option value="none">None</option>
-          <option value="strip">Old coating removal</option>
-          <option value="repairs">Minor repairs</option>
-        </select>
-      </label>
-    </div>
+<!-- НОВОЕ ПОЛЕ: адрес объекта -->
+<label class="full">Address of job / project
+<input
+name="address"
+required
+placeholder="City, street, apartment / unit"
+>
+</label>
 
-    <div class="total">Approximate total: <strong id="total">$0</strong></div>
+<label class="full">Message <textarea name="message" placeholder="Short details"></textarea></label>
+</div>
 
-    <!-- Minimal contact fields for estimate email -->
-    <div class="grid two">
-      <label>Your name <input id="estName" placeholder="Your name"></label>
-      <label>Your email <input id="estEmail" type="email" placeholder="you@example.com"></label>
-      <label class="full">Comment (optional) <textarea id="estMsg" placeholder="Any notes for Boris"></textarea></label>
-    </div>
-    <button class="btn btn-rose" id="email-estimate">Get Estimate by Email</button>
-  </section>
+<!-- reCAPTCHA-виджет Netlify -->
+<div data-netlify-recaptcha="true"></div>
 
-  <!-- Before / After -->
-  <section id="work" class="card">
-    <h2>My Work — Before / After</h2>
-    <div class="ba-grid">
-      <figure class="ba-pair">
-        <figcaption>Kitchen Restoration</figcaption>
-        <div class="ba-row">
-          <div class="ba-col">
-            <img src="images/kitchen-before.jpg" alt="Kitchen Before" loading="lazy">
-            <div class="ba-label">Before</div>
-          </div>
-          <div class="ba-col">
-            <img src="images/kitchen-after.jpg" alt="Kitchen After" loading="lazy">
-            <div class="ba-label">After</div>
-          </div>
-        </div>
-      </figure>
+<button class="btn btn-rose" type="submit">Send Booking</button>
+<a class="btn btn-ghost" href="https://wa.me/18186673778?text=Hello! I'd like to book." target="_blank" rel="noopener">Chat on WhatsApp</a>
+</form>
+</section>
 
-      <figure class="ba-pair">
-        <figcaption>Bathtub Reglazing</figcaption>
-        <div class="ba-row">
-          <div class="ba-col">
-            <img src="images/bath-before.jpg" alt="Bath Before" loading="lazy">
-            <div class="ba-label">Before</div>
-          </div>
-          <div class="ba-col">
-            <img src="images/bath-after.jpg" alt="Bath After" loading="lazy">
-            <div class="ba-label">After</div>
-          </div>
-        </div>
-      </figure>
+<!-- Estimate -->
+<section id="estimate" class="card">
+<h2>Restoration — Quick Estimate</h2>
+<div class="grid two">
+<label>Category
+<select id="cat">
+<option value="kitchen">Kitchen cabinets</option>
+<option value="bath">Bathtub</option>
+<option value="wood">Furniture / Door / Wood</option>
+</select>
+</label>
+<label>Area (sq ft) / tub size
+<input id="area" type="number" min="0" step="1" value="60">
+</label>
+<label>Finish / Material
+<select id="finish">
+<option value="std">Standard</option>
+<option value="enamel">Enamel paint</option>
+<option value="premium">Premium / two-part</option>
+</select>
+</label>
+<label>Extras
+<select id="extras">
+<option value="none">None</option>
+<option value="strip">Old coating removal</option>
+<option value="repairs">Minor repairs</option>
+</select>
+</label>
+</div>
 
-      <figure class="ba-pair">
-        <figcaption>Yard Cleanup</figcaption>
-        <div class="ba-row">
-          <div class="ba-col">
-            <img src="images/yard-before.jpg" alt="Yard Before" loading="lazy">
-            <div class="ba-label">Before</div>
-          </div>
-          <div class="ba-col">
-            <img src="images/yard-after.jpg" alt="Yard After" loading="lazy">
-            <div class="ba-label">After</div>
-          </div>
-        </div>
-      </figure>
-    </div>
-  </section>
+<div class="total">Approximate total: <strong id="total">$0</strong></div>
 
-  <!-- Reviews -->
-  <section id="reviews" class="card">
-    <h2>Leave a Review</h2>
-    <form name="review">
-      <div class="grid two">
-        <label>Name <input name="name" required></label>
-        <label>Email <input name="email" type="email" required></label>
-        <label>Rating
-          <select name="rating">
-            <option>5 — Excellent</option>
-            <option>4 — Good</option>
-            <option>3 — OK</option>
-          </select>
-        </label>
-        <label class="full">Review <textarea name="review" placeholder="Share your experience"></textarea></label>
-      </div>
-      <button class="btn btn-rose" type="submit">Submit Review</button>
-    </form>
-  </section>
+<!-- Minimal contact fields for estimate email -->
+<div class="grid two">
+<label>Your name <input id="estName" placeholder="Your name"></label>
+<label>Your email <input id="estEmail" type="email" placeholder="you@example.com"></label>
+<label class="full">Comment (optional) <textarea id="estMsg" placeholder="Any notes for Boris"></textarea></label>
+</div>
+<button class="btn btn-rose" id="email-estimate">Get Estimate by Email</button>
+</section>
+
+<!-- Before / After -->
+<section id="work" class="card">
+<h2>My Work — Before / After</h2>
+<div class="ba-grid">
+<figure class="ba-pair">
+<figcaption>Kitchen Restoration</figcaption>
+<div class="ba-row">
+<div class="ba-col">
+<img src="images/kitchen-before.jpg" alt="Kitchen Before" loading="lazy">
+<div class="ba-label">Before</div>
+</div>
+<div class="ba-col">
+<img src="images/kitchen-after.jpg" alt="Kitchen After" loading="lazy">
+<div class="ba-label">After</div>
+</div>
+</div>
+</figure>
+
+<figure class="ba-pair">
+<figcaption>Bathtub Reglazing</figcaption>
+<div class="ba-row">
+<div class="ba-col">
+<img src="images/bath-before.jpg" alt="Bath Before" loading="lazy">
+<div class="ba-label">Before</div>
+</div>
+<div class="ba-col">
+<img src="images/bath-after.jpg" alt="Bath After" loading="lazy">
+<div class="ba-label">After</div>
+</div>
+</div>
+</figure>
+
+<figure class="ba-pair">
+<figcaption>Yard Cleanup</figcaption>
+<div class="ba-row">
+<div class="ba-col">
+<img src="images/yard-before.jpg" alt="Yard Before" loading="lazy">
+<div class="ba-label">Before</div>
+</div>
+<div class="ba-col">
+<img src="images/yard-after.jpg" alt="Yard After" loading="lazy">
+<div class="ba-label">After</div>
+</div>
+</div>
+</figure>
+</div>
+</section>
+
+<!-- Reviews -->
+<section id="reviews" class="card">
+<h2>Leave a Review</h2>
+<form name="review">
+<div class="grid two">
+<label>Name <input name="name" required></label>
+<label>Email <input name="email" type="email" required></label>
+<label>Rating
+<select name="rating">
+<option>5 — Excellent</option>
+<option>4 — Good</option>
+<option>3 — OK</option>
+</select>
+</label>
+<label class="full">Review <textarea name="review" placeholder="Share your experience"></textarea></label>
+</div>
+<button class="btn btn-rose" type="submit">Submit Review</button>
+</form>
+</section>
 </main>
 
 <footer class="footer wrap">
-  © 2025 Barbariska Handyman • Los Angeles • Irvine • Orange County • 6:00–21:00
+© 2025 Barbariska Handyman • Los Angeles • Irvine • Orange County • 6:00–21:00
 </footer>
 </body>
 </html>
